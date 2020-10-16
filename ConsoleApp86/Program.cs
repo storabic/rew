@@ -1,6 +1,6 @@
 using System;
 
-namespace Task12
+namespace ConsoleApp86
 {
     class Program
     {
