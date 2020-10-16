@@ -1,3 +1,5 @@
+// https://github.com/storabic/rew
+
 using System;
 
 namespace ConsoleApp86
@@ -15,9 +17,12 @@ namespace ConsoleApp86
 
         static void Main(string[] args)
         {
-            var input = Console.ReadLine().Split(',');
-            if (input.Length > 0)
+            string s = Console.ReadLine();
+            if (String.IsNullOrEmpty(s))
+                Console.WriteLine("No data");
+            else
             {
+                var input = s.Split(',');
                 int[] count = new int[5];
                 string notValidData = "";
                 foreach (var data in input)
@@ -72,10 +77,6 @@ namespace ConsoleApp86
                  $"Not valid input strings: {notValidData}";
                 }
                 Console.WriteLine(ans);
-            }
-            else
-            {
-                Console.WriteLine("No data");
             }
         }
     }
