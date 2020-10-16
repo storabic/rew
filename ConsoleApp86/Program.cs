@@ -22,18 +22,32 @@ namespace Task12
                 string notValidData = "";
                 foreach (var data in input)
                 {
-                    if (data == "0" || data == "None")
-                        ++count[0];
-                    else if (data == "1" || data == "First")
-                        ++count[1];
-                    else if (data == "2" || data == "Second")
-                        ++count[2];
-                    else if (data == "3" || data == "Third")
-                        ++count[3];
-                    else if (data == "4" || data == "Fourth")
-                        ++count[4];
-                    else
-                        notValidData += $",{data}";
+                    switch (data)
+                    {
+                        case "0":
+                        case "None":
+                            ++count[0];
+                            break;
+                        case "1":
+                        case "First":
+                            ++count[1];
+                            break;
+                        case "2":
+                        case "Second":
+                            ++count[2];
+                            break;
+                        case "3":
+                        case "Third":
+                            ++count[3];
+                            break;
+                        case "4":
+                        case "Fourth":
+                            ++count[4];
+                            break;
+                        default:
+                            notValidData += $",{data}";
+                            break;
+                    }
                 }
                 String ans;
                 if (notValidData.Length < 1)
