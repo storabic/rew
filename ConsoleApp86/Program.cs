@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Task12
 {
@@ -33,9 +33,8 @@ namespace Task12
                     else if (data == "4" || data == "Fourth")
                         ++count[4];
                     else
-                        notValidData += $",{data}"; 
+                        notValidData += $",{data}";
                 }
-                notValidData = notValidData.Substring(1);
                 String ans;
                 if (notValidData.Length < 1)
                 {
@@ -48,6 +47,7 @@ namespace Task12
                 }
                 else
                 {
+                    notValidData = notValidData.Substring(1);
                     ans = "Input data types:\n" +
                  $"None(0)-{count[0]}\n" +
                  $"First(1)-{count[1]}\n" +
